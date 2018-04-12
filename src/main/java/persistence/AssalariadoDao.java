@@ -47,9 +47,11 @@ public class AssalariadoDao {
 			a.setId(data.getInt("pk_idAssalariado"));
 			a.setCpf(data.getString("cpf"));
 			a.setNome(data.getString("nome"));
-			a.setSobrenome(data.getString("sobrenome"));			
+			a.setSobrenome(data.getString("sobrenome"));
+			a.setSalario(data.getDouble("salario"));
 			assalariados.add(a);			
 		}		
+		comando.close();
 		return assalariados;
 	}
 }
